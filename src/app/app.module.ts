@@ -63,6 +63,9 @@ import { CategorySelectionComponent } from './Frontend/Component/category-select
 import { UserSignupComponent } from './Frontend/Component/user-signup/user-signup.component';
 import { ProductCategoryComponent } from './Frontend/Component/product-category/product-category.component';
 import { ProductCategoryLeftpanelComponent } from './Frontend/Component/product-category-leftpanel/product-category-leftpanel.component';
+import { ProductListComponent } from './Components/Super-admin/Superadmin-product-management/product-list/product-list.component';
+import { AddNewProductsComponent } from './Components/Super-admin/Superadmin-product-management/add-new-products/add-new-products.component';
+import { HSNCodeListComponent } from './Components/Super-admin/Superadmin-product-management/hsn-code-list/hsn-code-list.component';
 
 
 @NgModule({
@@ -121,6 +124,9 @@ import { ProductCategoryLeftpanelComponent } from './Frontend/Component/product-
     UserSignupComponent,
     ProductCategoryComponent,
     ProductCategoryLeftpanelComponent,
+    ProductListComponent,
+    AddNewProductsComponent,
+    HSNCodeListComponent
     
 
   ],

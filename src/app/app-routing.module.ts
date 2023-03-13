@@ -38,6 +38,9 @@ import { SignInComponent } from './Frontend/Component/sign-in/sign-in.component'
 import { UserSignupComponent } from './Frontend/Component/user-signup/user-signup.component';
 import { HomepageComponent } from './Frontend/homepage/homepage.component';
 import { AuthGuard } from './shared/auth.guard';
+import { ProductListComponent } from './Components/Super-admin/Superadmin-product-management/product-list/product-list.component';
+import { AddNewProductsComponent } from './Components/Super-admin/Superadmin-product-management/add-new-products/add-new-products.component';
+import { HSNCodeListComponent } from './Components/Super-admin/Superadmin-product-management/hsn-code-list/hsn-code-list.component';
 
 
 const routes: Routes = [
@@ -79,6 +82,9 @@ const routes: Routes = [
   { path: 'user_login', component: SignInComponent },
   { path: 'user_signup', component: UserSignupComponent },
   { path: 'product_category', component: ProductCategoryComponent },
+  {path: 'superadmin_product-list', component: ProductListComponent},
+  {path: 'superadmin_add-new-product', component: AddNewProductsComponent},
+  {path: 'superadmin_HSN-List', component: HSNCodeListComponent}
 ];
 
 @NgModule({

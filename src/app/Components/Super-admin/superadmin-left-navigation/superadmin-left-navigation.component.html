@@ -15,7 +15,13 @@
                 <li><a routerLink="/superadmin_view_edit_user" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-pencil-square" aria-hidden="true"></i>&nbsp;View/Modify User</a></li>
             </ul>
         </li>
-        <li><a routerLink="/superadmin_product_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Product Management</a></li>
+        <li class='sub-menu'><a><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Product Management<div class='fa fa-caret-down right'></div></a>
+            <ul>
+                <li><a routerLink="/superadmin_product-list" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-list-ol" aria-hidden="true"></i>&nbsp;Show Product List</a></li>
+                <li><a routerLink="/superadmin_add-new-product" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-list-ol" aria-hidden="true"></i>&nbsp;Add New Products</a></li>
+                <li><a routerLink="/superadmin_HSN-List" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-list-ol" aria-hidden="true"></i>&nbsp;HSN Code List</a></li>
+            </ul>
+        </li>
         <li class='sub-menu'><a routerLink="/superadmin_consumer_management" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbsp;Consumer Management<div class='fa fa-caret-down right'></div></a>
             <ul>
                 <li><a routerLink="/superadmin_search_consumer" routerLinkActive="active_menu" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-list-ol" aria-hidden="true"></i>&nbsp;Search Consumer</a></li>
