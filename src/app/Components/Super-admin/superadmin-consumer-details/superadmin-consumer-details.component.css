@@ -1,11 +1,11 @@
 .form-label{    
     font-size: 18px;
-    color: #00b3a0;
+    color: #038f80;
     line-height: 20px;
     font-weight: normal;
 }
 .forgot_link a{
-    color: #00b3a0;
+    color: #038f80;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
@@ -14,14 +14,14 @@
     text-decoration: underline;
 }
 .ttw_button_container {
-    background: #27d9b4;
+    background: #038f80;
     padding: 4px;
     margin: 4px 0;
     display: inline-block;
     border-radius:30px;
 }
 .ttw_button{  
-    background: #27d9b4;
+    background: #038f80;
     color: #fff;
     border: 1px solid white;
     padding: 6px 52px;
