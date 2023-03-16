@@ -17,21 +17,21 @@ export class AuthService {
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   currentUser = {};
   pinlocation = {};
-  constructor(private http: HttpClient, public router: Router) {}
+  constructor(private http: HttpClient, public router: Router) { }
   // Sign-up
   signUp(user: User): Observable<any> {
     let api = `${this.endpoint}/auth/signup`;
     return this.http.post(api, user).pipe(catchError(this.handleError));
   }
-  
+
 
   // Sign-in
   signIn(user: User) {
     return this.http
       .post<any>(`${this.endpoint}/auth/login`, user)
       .subscribe((res: any) => {
-       // console.log(res);
-       
+        // console.log(res);
+
         localStorage.setItem('access_token', res.access_token);
         this.getUserProfile(res).subscribe((res) => {
           this.currentUser = res;
@@ -39,14 +39,14 @@ export class AuthService {
           $('.login-dropdown').hide();
           $('.overlay').hide();
         });
-        
-    },error=>{this.handleError(error);$('.overlay').hide();});
-    
+
+      }, error => { this.handleError(error); $('.overlay').hide(); });
+
   }
 
- 
 
- //Pincode Search
+
+  //Pincode Search
   getPin(pin: any): Observable<User> {
     return this.http
       .get<User>(this.endpoint + '/vendor/check-pincode/' + pin)
@@ -70,7 +70,7 @@ export class AuthService {
     let api = `${this.endpoint}/auth/validateotp`;
     return this.http.post(api, user).pipe(catchError(this.handleError));
   }
- 
+
 
   getToken() {
     return localStorage.getItem('access_token');
@@ -96,9 +96,13 @@ export class AuthService {
     );
   }
 
- 
+  /** Product Management API */
+  addProduct(productList: any): Observable<any> {
+    let api = `${this.endpoint}/product/add`;
+    return this.http.post(api, productList).pipe(catchError(this.handleError));
+  }
 
-  
+
 
 
   // Error
@@ -112,45 +116,45 @@ export class AuthService {
       msg = error.error.message;
       console.log(msg);
       $('.show_err').html(msg);
-      
+
     } else {
       // server-side error
       msg = `Error Code: ${error.status}\nMessage: ${error.error.message}`;
       msg_server = error.error.message;
       console.log(msg);
-      
+
       $('.show_err').html(msg_server);
-      if(error.status >=400){
-        $('.show_err').html('Error: Username or Password Mismatch!'); 
+      if (error.status >= 400) {
+        $('.show_err').html('Error: Username or Password Mismatch!');
       }
 
-      if(msg_server =='\"body\" does not match any of the allowed types'){
+      if (msg_server == '\"body\" does not match any of the allowed types') {
         const err_msg_1 = 'Error: Please Provide Valid Email and Mobile No!';
 
-      } 
-      
-        $('.vendor_signup_error').html(msg_server);
-        $('.mob_verification, .email_verification').prop('disabled', true);
-        
-       
-      
+      }
+
+      $('.vendor_signup_error').html(msg_server);
+      $('.mob_verification, .email_verification').prop('disabled', true);
+
+
+
       /* if(msg_server == 'Email or Mobile not verified'){
         $('.vendor_signup_error').html('Error: '+ msg_server);
         $('.mob_verification, .email_verification').prop('disabled', true);
         $('.verify_otp').prop('disabled', true);
        
       } */
-      if(msg_server =='\"body\" does not match any of the allowed types'){
+      if (msg_server == '\"body\" does not match any of the allowed types') {
         $('.vendor_signup_error').html('Error: Please Provide Valid Email and Mobile No!');
         $('.mob_verification, .email_verification').prop('disabled', true);
         $('.verify_otp').prop('disabled', true);
       }
-       $('.vendor_signup_error').show();
+      $('.vendor_signup_error').show();
       $('.otp_success_msg').hide();
       //$('.vendor_signup_error').html(msg_server);
-     
-      
-      
+
+
+
     }
     return throwError(() => msg);
   }
