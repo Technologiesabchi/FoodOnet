@@ -102,6 +102,13 @@ export class AuthService {
     return this.http.post(api, productList).pipe(catchError(this.handleError));
   }
 
+  searchProduct(searchObj: any): Observable<any> {
+    let api = `${this.endpoint}/product/search` + searchObj;
+    return this.http
+      .get(api)
+      .pipe(tap((data: any) => console.log(JSON.stringify(data))), catchError(this.handleError));
+  }
+
 
 
 
