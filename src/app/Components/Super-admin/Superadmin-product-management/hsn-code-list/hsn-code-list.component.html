@@ -104,25 +104,33 @@
 
                 <div class="d-flex mb-3">
                   <div class="col-sm-3">
-                    <div class="ttw_button_container">
-                        <button class="ttw_button dropdown-toggle" type="button" data-bs-toggle="dropdown">Export</button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Excel File</a></li>
-                          <li><a class="dropdown-item" href="#">CSV File</a></li>
-                          <li><a class="dropdown-item" href="#">PDF File</a></li>
-                        </ul>
+                    <div ngbDropdown class="export-dropdown">
+                      <div class="ttw_button_container">
+                      <button type="button" class="ttw_button dropdown-toggle" id="exportDropdown" ngbDropdownToggle>
+                        Export
+                      </button>
+                      <div ngbDropdownMenu aria-labelledby="exportDropdown">
+                        <button ngbDropdownItem>Excel File</button>
+                        <button ngbDropdownItem>CSV File</button>
+                        <button ngbDropdownItem>PDF File</button>
+                      </div>
                     </div>
+                  </div>
                 </div>
                  
-                  <div class="col-sm-3 import-margin">
+                <div class="col-sm-3 import-button">
+                  <div ngbDropdown class="import-dropdown">
                     <div class="ttw_button_container">
-                        <button class="ttw_button dropdown-toggle" type="button" data-bs-toggle="dropdown">Import</button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Excel File</a></li>
-                          <li><a class="dropdown-item" href="#">CSV File</a></li>
-                        </ul>
+                    <button type="button" class="ttw_button dropdown-toggle" id="importDropdown" ngbDropdownToggle>
+                      Export
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="importDropdown">
+                      <button ngbDropdownItem>Excel File</button>
+                      <button ngbDropdownItem>CSV File</button>
                     </div>
+                  </div>
                 </div>
+              </div>
                   <div class="col-sm-3">
                       <div class="ttw_button_container">
                           <button class="ttw_button" type="button" >Modify</button>
