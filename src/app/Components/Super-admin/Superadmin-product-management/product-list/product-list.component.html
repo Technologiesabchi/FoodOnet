@@ -89,54 +89,16 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Product</td>
-                          <td>Product</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          
-                          
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Product</td>
-                          <td>Product</td>
-                          <td>@fat</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Product</td>
-                          <td>Product</td>
-                          <td>@fat</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td>Product</td>
-                          <td>Product</td>
-                          <td>@fat</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          
+                        <tr *ngFor="let p of productList; let i = index">
+                          <th scope="row">{{i+1}}</th>
+                          <td>{{p.category}}</td>
+                          <td>{{p.sub_category}}</td>
+                          <td>{{p.name}}</td>
+                          <td></td>
+                          <td>{{p.hsn_code}}</td>
+                          <td></td>
+                          <td></td>
+                          <td><img id="img-{{i+1}}" [src]="p.image_url" width="100" height="" alt="no preview available"></td>
                         </tr>
                        
                       </tbody>
