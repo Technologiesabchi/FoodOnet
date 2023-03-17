@@ -12,28 +12,48 @@
           <div class="card shadow-2-strong" style="border-radius: 1rem; background-color:#f8f9fa;">
             <div class="card-body p-5">
   
-              <h2 class="mb-5 text-center">Consumer Details</h2>
+              <h2 class="mb-5 text-center">Consumer Management: Consumer Details</h2>
              
               
               
               <div class="super_admin_login">
                 
                 <div class="mb-3 row">
-                    <label for="trade_no" class="col-sm-2 col-form-label form-label">Consumer Id</label>
+                    <label for="consumer-id" class="col-sm-2 col-form-label form-label">Consumer Id</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_emp_code" value="FD23452" disabled >
+                      <input type="text" class="form-control" id="consumer-id" value="FD23452" disabled >
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="trade_no" class="col-sm-2 col-form-label form-label">Mobile No</label>
+                    <label for="mobile-no" class="col-sm-2 col-form-label form-label">Mobile No</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_emp_code" >
+                      <input type="text" class="form-control mb-1" id="mobile-no" >
+                      <input class="btn ttw_button button-otp" type="submit" value="Verify">
                     </div>
-                    <label for="trade_no" class="col-sm-2 col-form-label form-label">Email Id</label>
+                    <label for="email-id" class="col-sm-2 col-form-label form-label">Email Id</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_first_name" >
+                      <input type="text" class="form-control mb-1" id="email-id" >
+                      <input class="btn ttw_button button-otp" type="submit" value="Verify">
                     </div>
                 </div> 
+                <div class="mb-3 row">
+                  <label for="mobile-no-otp" class="col-sm-2 col-form-label form-label">Enter OTP</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control mb-1" id="mobile-no-otp" >
+                    <div class="d-flex flex-row-reverse">
+                    <input class="btn ttw_button button-sr" type="button" value="Resend">
+                    <input class="btn ttw_button button-sr" type="submit" value="submit">
+                  </div>
+                  </div>
+                  <label for="email-id-otp" class="col-sm-2 col-form-label form-label">Enter OTP</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control mb-1" id="email-id-otp" >
+                    <div class="d-flex flex-row-reverse">
+                      <input class="btn ttw_button button-sr" type="button" value="Resend">
+                      <input class="btn ttw_button button-sr" type="submit" value="submit">
+                    </div>
+                  </div>
+              </div>
                 <div class="mb-3 row">
                     <label for="trade_no" class="col-sm-2 col-form-label form-label">First Name</label>
                     <div class="col-sm-4">
@@ -43,6 +63,9 @@
                     <div class="col-sm-4">
                       <input type="text" class="form-control" id="admin_last_name" >
                     </div>
+                </div>
+                <div class="mb-3 row personal-data-heading">
+                 <h3> Personal Data </h3> 
                 </div>  
                 <div class="mb-3 row">
                     <label for="trade_no" class="col-sm-2 col-form-label form-label">Sex</label>
@@ -66,7 +89,11 @@
                 </div>  
                 <div class="mb-3 row">
                     <label for="trade_no" class="col-sm-3 col-form-label form-label"><u>Family Member:</u></label>
-                   
+                    <div class="col-sm-5">
+                    <div class="ttw_button_container">
+                      <button class="ttw_button" type="submit" >+ Add More</button>
+                  </div>
+                </div>
                 </div> 
                 <div class="mb-3 row">
                     <label for="trade_no" class="col-sm-2 col-form-label form-label">Name</label>
@@ -91,23 +118,37 @@
                 <div class="d-flex justify-content-center align-items-center mt-5">
                  
      
-                  <div class="col-sm-3">
+                  <div class="col-sm-4" style="margin-right: -22px">
                       <div class="ttw_button_container">
-                          <button class="ttw_button" type="submit" >Save</button>
+                          <button class="ttw_button" type="submit" >Order History</button>
                       </div>
                   </div>
+                  <div class="col-sm-4">
+                    <div class="ttw_button_container">
+                        <button class="ttw_button" type="submit" >Saved Addresses</button>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="ttw_button_container">
+                        <button class="ttw_button" type="submit" routerLink="/superadmin_consumer_complaint_details">Complaints</button>
+                    </div>
+                </div>
+                 </div>
+
+                 <div class="mt-3 d-flex justify-content-center align-items-center">
                   <div class="col-sm-3">
                     <div class="ttw_button_container">
                         <button class="ttw_button" type="submit" >Edit</button>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="ttw_button_container">
-                        <button class="ttw_button" type="submit" routerLink="/superadmin_consumer_complaint_details">Complaints</button>
-                    </div>
-                </div>
-                 
-                </div>
+                <div >
+                  <div class="ttw_button_container">
+                      <button class="ttw_button" type="submit" >Exit</button>
+                  </div>
+              </div>
+
+                 </div>
+
               </div>
            
   
