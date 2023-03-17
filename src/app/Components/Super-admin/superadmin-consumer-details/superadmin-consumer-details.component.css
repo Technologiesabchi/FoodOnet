@@ -39,3 +39,12 @@
 .personal-data-heading {
     text-decoration: underline #00b3a0 3px;
 }
+
+.button-otp {
+    padding: 6px 26px;
+    margin-left: 121px;
+}
+
+.button-sr{
+    padding: 6px 26px;
+}

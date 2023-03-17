@@ -19,21 +19,41 @@
               <div class="super_admin_login">
                 
                 <div class="mb-3 row">
-                    <label for="trade_no" class="col-sm-2 col-form-label form-label">Consumer Id</label>
+                    <label for="consumer-id" class="col-sm-2 col-form-label form-label">Consumer Id</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_emp_code" value="FD23452" disabled >
+                      <input type="text" class="form-control" id="consumer-id" value="FD23452" disabled >
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="trade_no" class="col-sm-2 col-form-label form-label">Mobile No</label>
+                    <label for="mobile-no" class="col-sm-2 col-form-label form-label">Mobile No</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_emp_code" >
+                      <input type="text" class="form-control mb-1" id="mobile-no" >
+                      <input class="btn ttw_button button-otp" type="submit" value="Verify">
                     </div>
-                    <label for="trade_no" class="col-sm-2 col-form-label form-label">Email Id</label>
+                    <label for="email-id" class="col-sm-2 col-form-label form-label">Email Id</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_first_name" >
+                      <input type="text" class="form-control mb-1" id="email-id" >
+                      <input class="btn ttw_button button-otp" type="submit" value="Verify">
                     </div>
                 </div> 
+                <div class="mb-3 row">
+                  <label for="mobile-no-otp" class="col-sm-2 col-form-label form-label">Enter OTP</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control mb-1" id="mobile-no-otp" >
+                    <div class="d-flex flex-row-reverse">
+                    <input class="btn ttw_button button-sr" type="button" value="Resend">
+                    <input class="btn ttw_button button-sr" type="submit" value="submit">
+                  </div>
+                  </div>
+                  <label for="email-id-otp" class="col-sm-2 col-form-label form-label">Enter OTP</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control mb-1" id="email-id-otp" >
+                    <div class="d-flex flex-row-reverse">
+                      <input class="btn ttw_button button-sr" type="button" value="Resend">
+                      <input class="btn ttw_button button-sr" type="submit" value="submit">
+                    </div>
+                  </div>
+              </div>
                 <div class="mb-3 row">
                     <label for="trade_no" class="col-sm-2 col-form-label form-label">First Name</label>
                     <div class="col-sm-4">
