@@ -15,11 +15,11 @@
               <div class="mb-3 row">
                   <label for="Product-Name" class="col-sm-4 col-form-label form-label">Search By Product Name</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control mb-2" id="Product-Name" >
+                    <input type="text" class="form-control mb-2" id="Product-Name" [(ngModel)]="productName">
                   </div>
                   <div class="d-flex justify-content-center">
                     <div class="ttw_button_container">
-                        <button class="ttw_button" type="button">Search</button>
+                        <button class="ttw_button" type="button" (click)="searchyByName()">Search</button>
                     </div>
                 </div>
               </div>  
@@ -28,11 +28,11 @@
               <div class="mb-3 row">
                 <label for="HSN-code" class="col-sm-4 col-form-label form-label">Search By HSN Code</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control mb-2" id="HSN-code" >
+                  <input type="text" class="form-control mb-2" id="HSN-code" [(ngModel)]="productHsnCode">
                 </div>
                 <div class="d-flex justify-content-center">
                   <div class="ttw_button_container">
-                      <button class="ttw_button" type="button">Search</button>
+                      <button class="ttw_button" type="button" (click)="searchyByHsnCode()">Search</button>
                   </div>
               </div>
             </div> 
@@ -43,23 +43,19 @@
               <div class="mb-3 row">
                 <label for="product-catg" class="col-sm-4 col-form-label form-label">Product Category</label>
                 <div class="col-sm-8">
-                  <select class="form-select" aria-label="Default select example">
-                      <option selected>Product Category</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                      <option value="4">Four</option>
+                  <select class="form-select" aria-label="Default select example" [(ngModel)]="productCategory">
+                    <option value="Category1">One</option>
+                    <option value="Category2">Two</option>
                   </select>
                 </div>
               </div> 
               <div class="mb-3 row">
                   <label for="product-sub-catg" class="col-sm-4 col-form-label form-label">Product Sub-Category</label>
                   <div class="col-sm-8">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Select Product Sub-category</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="productSubCategory">
+                      <option value="Subcat1">One</option>
+                      <option value="Subcat2">Two</option>
+                      <option value="Subcat3">Three</option>
                     </select>
                   </div>
                 </div>
@@ -67,14 +63,19 @@
               <div class="mb-3 row">
                   <label for="prod_name" class="col-sm-4 col-form-label form-label">Product Name</label>
                   <div class="col-sm-8">
-                      <select class="form-select" aria-label="Default select example">
+                      <select class="form-select" aria-label="Default select example" [(ngModel)]="product">
                           <option selected>Choose Product Name</option>
                           <option value="1">One</option>
                           <option value="2">Two</option>
                           <option value="3">Three</option>
                       </select>
                   </div>
-              </div>  
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="ttw_button_container">
+                    <button class="ttw_button" type="button" (click)="searchyByDetails()">Search</button>
+                </div>
+            </div>  
 
               
              
