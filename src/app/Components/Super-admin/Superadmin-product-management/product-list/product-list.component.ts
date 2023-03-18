@@ -97,6 +97,7 @@ export class ProductListComponent implements OnInit {
   deleteProduct() {
     $('.overlay').show();
     this.authService.deleteProduct(this.selectedData._id).subscribe((res: any) => {
+      this.selectedData = null;
       $('.overlay').hide();
       this.productSearchList(this.selectedQueryParams);
     }, (err: any) => {
@@ -128,6 +129,7 @@ export class ProductListComponent implements OnInit {
     }
     $('.overlay').show();
     this.authService.modifyProduct(params, this.selectedData._id).subscribe((res: any) => {
+      this.selectedData = null;
       $('.overlay').hide();
       this.productSearchList(this.selectedQueryParams);
     }, (err: any) => {
