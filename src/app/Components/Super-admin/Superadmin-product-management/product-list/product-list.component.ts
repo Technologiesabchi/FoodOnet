@@ -13,6 +13,8 @@ export class ProductListComponent implements OnInit {
   productSubCategory: string = '';
   product: string = '';
   productList: any[] = [];
+  selectedData: any = null;
+  selectedQueryParams: any;
 
   constructor(public authService: AuthService) { }
 
@@ -67,10 +69,25 @@ export class ProductListComponent implements OnInit {
   }
 
   productSearchList(queryParams: any) {
+    this.selectedQueryParams = queryParams;
     $('.overlay').show();
     this.authService.searchProduct(queryParams).subscribe((res: any) => {
       $('.overlay').hide();
       this.productList = res.data;
+    }, (err: any) => {
+      $('.overlay').hide();
+    })
+  }
+
+  selectProduct(p: any) {
+    this.selectedData = p;
+  }
+
+  deleteProduct() {
+    $('.overlay').show();
+    this.authService.deleteProduct(this.selectedData._id).subscribe((res: any) => {
+      $('.overlay').hide();
+      this.productSearchList(this.selectedQueryParams);
     }, (err: any) => {
       $('.overlay').hide();
     })

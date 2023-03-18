@@ -86,6 +86,7 @@
                   <table class="table table-bordered">
                       <thead class="bg-blue">
                         <tr>
+                          <th scope="col"></th>
                           <th scope="col">SL No.</th>
                           <th scope="col">Product Category</th>
                           <th scope="col">Product Sub-Category</th>
@@ -101,6 +102,9 @@
                       </thead>
                       <tbody>
                         <tr *ngFor="let p of productList; let i = index">
+                          <th>
+                            <input type="radio" name="selectProduct" id="radio-{{i+1}}" (click)="selectProduct(p)">
+                          </th>
                           <th scope="row">{{i+1}}</th>
                           <td>{{p.category}}</td>
                           <td>{{p.sub_category}}</td>
@@ -133,12 +137,12 @@
                
                  <div class="col-sm-3">
                   <div class="ttw_button_container">
-                      <button class="ttw_button" type="button" data-bs-toggle="modal" data-bs-target="#modal1">Modify</button>
+                      <button class="ttw_button" type="button" data-bs-toggle="modal" data-bs-target="#modal1" [disabled]="!selectedData">Modify</button>
                   </div>
               </div>
                 <div class="col-sm-2 delete-padding">
                     <div class="ttw_button_container">
-                        <button class="ttw_button" type="button" data-bs-toggle="modal" data-bs-target="#modal2">Delete</button>
+                        <button class="ttw_button" type="button" data-bs-toggle="modal" data-bs-target="#modal2" [disabled]="!selectedData">Delete</button>
                     </div>
                 </div>
 
@@ -167,7 +171,7 @@
       <div class="d-flex justify-content-around mb-4">
 
         <div class="ttw_button_container">
-        <button type="submit" class="ttw_button" data-bs-dismiss="modal">Yes</button>
+        <button type="submit" class="ttw_button" data-bs-dismiss="modal" (click)="deleteProduct()">Yes</button>
         </div> 
 
         <div class="ttw_button_container">
