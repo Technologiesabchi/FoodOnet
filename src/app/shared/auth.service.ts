@@ -114,7 +114,10 @@ export class AuthService {
     return this.http.delete(api).pipe(catchError(this.handleError));
   }
 
-
+  modifyProduct(productList: any, id: any): Observable<any> {
+    let api = `${this.endpoint}/product/modify/${id}`;
+    return this.http.put(api, productList).pipe(catchError(this.handleError));
+  }
 
 
   // Error

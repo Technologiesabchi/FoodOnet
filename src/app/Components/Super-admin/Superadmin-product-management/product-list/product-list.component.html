@@ -195,24 +195,19 @@
         <div class="mb-3 row">
           <label for="product-catg-modal" class="col-sm-4 col-form-label form-label">Product Category</label>
           <div class="col-sm-8">
-            <select class="form-select" aria-label="Default select example">
-                <option selected></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-                <option value="4">Four</option>
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedProdCat">
+              <option value="Category1">One</option>
+              <option value="Category2">Two</option>
             </select>
           </div>
         </div> 
         <div class="mb-3 row">
           <label for="product-sub-catg-modal" class="col-sm-4 col-form-label form-label">Product Sub-Category</label>
           <div class="col-sm-8">
-            <select class="form-select" aria-label="Default select example">
-              <option selected></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-                <option value="4">Four</option>
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedProdSubCat">
+              <option value="Subcat1">One</option>
+              <option value="Subcat2">Two</option>
+              <option value="Subcat3">Three</option>
             </select>
           </div>
         </div> 
@@ -220,7 +215,7 @@
       <div class="mb-3 row">
         <label for="Product-Name-modal" class="col-sm-4 col-form-label form-label">Product Name</label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="Product-Name-modal" >
+          <input type="text" class="form-control" id="Product-Name-modal" [(ngModel)]="selectedProdName">
         </div>
     </div>
     <div class="mb-3 row ">
@@ -233,12 +228,19 @@
     <div class="mb-3 row">
       <label for="HSN-code" class="col-sm-4 col-form-label form-label">Search By HSN Code</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="HSN-code" >
+        <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedProdHsnCode">
+          <option value="code1">One</option>
+          <option value="code2">Two</option>
+        </select>
       </div>
   </div>
   
-  <div class="d-flex justify-content-around mb-4">
-    <div class="ttw_button_container">
+  <div class="d-flex text-center justify-content-around mb-4">
+    <div class="col-12">
+      <img [src]="imageData" width="125" height="">
+      <input type="file" accept="image/png, image/gif, image/jpeg" (change)="selectFile($event)">
+    </div>
+    <!-- <div class="ttw_button_container">
       <button type="button" class="ttw_button ">Browse</button>
     </div> 
 
@@ -248,11 +250,11 @@
 
     <div class="ttw_button_container">
       <button type="button" class="ttw_button">View</button>
-    </div> 
+    </div>  -->
   </div>
       </div>
       <div class="modal-footer justify-content-around">
-        <button type="submit" class="ttw_button ttw_button_container" data-bs-dismiss="modal">Submit & Exit</button>
+        <button type="submit" class="ttw_button ttw_button_container" data-bs-dismiss="modal" (click)="modifyProduct()">Submit & Exit</button>
         <button type="submit" class="ttw_button ttw_button_container" data-bs-dismiss="modal">Exit</button>
       </div>
     </div>
