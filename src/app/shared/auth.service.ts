@@ -103,10 +103,15 @@ export class AuthService {
   }
 
   searchProduct(searchObj: any): Observable<any> {
-    let api = `${this.endpoint}/product/search` + searchObj;
+    let api = `${this.endpoint}/product/search${searchObj}`;
     return this.http
       .get(api)
-      .pipe(tap((data: any) => console.log(JSON.stringify(data))), catchError(this.handleError));
+      .pipe(tap(), catchError(this.handleError));
+  }
+
+  deleteProduct(id: any): Observable<any> {
+    let api = `${this.endpoint}/product/remove/${id}`;
+    return this.http.delete(api).pipe(catchError(this.handleError));
   }
 
 

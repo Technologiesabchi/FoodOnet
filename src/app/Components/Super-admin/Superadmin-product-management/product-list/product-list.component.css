@@ -30,6 +30,9 @@ button.ttw_button{
     display: inline-block;
     border-radius:30px;
 }
+button.ttw_button:disabled{  
+  background: #a7aaaa;
+}
 .form-level-green{
     color: #038f80;
     font-size: 18px;
