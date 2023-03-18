@@ -17,13 +17,57 @@ export class ProductListComponent implements OnInit {
   constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
-    this.productName = 'product';
-    this.productSearchList();
   }
 
-  productSearchList() {
+  searchyByName() {
+    if (!!this.productName) {
+      let queryParams = `?search=${this.productName}`;
+      this.productSearchList(queryParams);
+    } else {
+      alert('Please enter something to search.')
+    }
+
+  }
+
+  searchyByHsnCode() {
+    if (!!this.productHsnCode) {
+      let queryParams = `?search=${this.productHsnCode}`;
+      this.productSearchList(queryParams);
+    } else {
+      alert('Please enter something to search.')
+    }
+  }
+
+  searchyByDetails() {
+    let searchParams = '';
+    if (!!this.product) {
+      searchParams = `search=${this.product}`;
+    }
+    if (!!this.productCategory) {
+      if (!!searchParams) {
+        searchParams = `${searchParams}&category=${this.productCategory}`;
+      } else {
+        searchParams = `category=${this.productCategory}`;
+      }
+    }
+    if (!!this.productSubCategory) {
+      if (!!searchParams) {
+        searchParams = `${searchParams}&sub_category=${this.productSubCategory}`;
+      } else {
+        searchParams = `sub_category=${this.productSubCategory}`;
+      }
+    }
+    if (!!searchParams) {
+      let queryParams = `?${searchParams}`;
+      this.productSearchList(queryParams);
+    } else {
+      alert('Please enter something to search.')
+    }
+
+  }
+
+  productSearchList(queryParams: any) {
     $('.overlay').show();
-    let queryParams = `?search=${this.productName}`;
     this.authService.searchProduct(queryParams).subscribe((res: any) => {
       $('.overlay').hide();
       this.productList = res.data;
