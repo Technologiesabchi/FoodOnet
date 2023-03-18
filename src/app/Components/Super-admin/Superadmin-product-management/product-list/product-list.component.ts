@@ -16,6 +16,12 @@ export class ProductListComponent implements OnInit {
   selectedData: any = null;
   selectedQueryParams: any;
 
+  selectedProdCat: string = '';
+  selectedProdSubCat: string = '';
+  selectedProdName: string = '';
+  selectedProdHsnCode: string = '';
+  imageData: any = '';
+
   constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
@@ -81,11 +87,47 @@ export class ProductListComponent implements OnInit {
 
   selectProduct(p: any) {
     this.selectedData = p;
+    this.imageData = p.image_url;
+    this.selectedProdCat = p.category;
+    this.selectedProdName = p.name;
+    this.selectedProdSubCat = p.sub_category;
+    this.selectedProdHsnCode = p.hsn_code;
   }
 
   deleteProduct() {
     $('.overlay').show();
     this.authService.deleteProduct(this.selectedData._id).subscribe((res: any) => {
+      $('.overlay').hide();
+      this.productSearchList(this.selectedQueryParams);
+    }, (err: any) => {
+      $('.overlay').hide();
+    })
+  }
+
+  selectFile(event: any) {
+    if (event.target.files) {
+      var reader = new FileReader()
+      reader.readAsDataURL(event.target.files[0])
+      reader.onload = (event: any) => {
+        this.imageData = event.target.result;
+        // this.selectedData.image_url = event.target.result;
+      }
+
+    }
+  }
+
+  modifyProduct() {
+    let params = {
+      name: this.selectedProdName,
+      image_url: this.imageData,
+      category: this.selectedProdCat,
+      sub_category: this.selectedProdSubCat,
+      hsn_code: this.selectedProdHsnCode,
+      commission: this.selectedData.commission,
+      status: this.selectedData.status
+    }
+    $('.overlay').show();
+    this.authService.modifyProduct(params, this.selectedData._id).subscribe((res: any) => {
       $('.overlay').hide();
       this.productSearchList(this.selectedQueryParams);
     }, (err: any) => {
