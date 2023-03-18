@@ -1,1 +1,172 @@
-<p>superadmin-cosumer-grievences works!</p>
+<app-header></app-header>
+<section style="background-color: #fff;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+            <app-superadmin-left-navigation></app-superadmin-left-navigation>   
+        </div>
+        <div class="col-12 col-md-9 col-lg-9 col-xl-9">
+          <div class="card shadow-2-strong" style="border-radius: 1rem; background-color:#f8f9fa;">
+            <div class="card-body p-5">
+  
+              <h2 class="mb-5 text-center">Consumer Management: Grievences</h2>
+              <div class="super_admin_login">
+                <div class="mb-3 row">
+                  <label for="" class="col-sm-2 col-form-label form-label">Duration</label>
+                  <div class="col-sm-4 duration-radio-btn">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">All</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">From</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <select class="form-select" aria-label="start-date">
+                        <option value="1"></option>
+                    </select>
+                  </div>
+                  <div class="col-sm-2" style="padding-top: 7px; margin-right: -88px">
+                    To
+                  </div>
+                  <div class="col-sm-2">
+                    <select class="form-select" aria-label="end-date">
+                        <option value="1"></option>
+                    </select>
+                  </div>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="" class="col-sm-4 col-form-label form-label">Grievence Search By: </label>
+              </div>
+
+              <div class="mb-3 row">
+                <label for="state" class="col-sm-2 col-form-label form-label">State</label>
+                <div class="col-sm-4">
+                  <select class="form-select" aria-label="state">
+                      <option selected></option>
+                      <option value="1">State 1</option>
+                      <option value="1">State 2</option>
+                      <option value="1">State 3</option>
+                      <option value="1">State 4</option>
+                  </select>
+                </div>
+                <label for="email-id" class="col-sm-2 col-form-label form-label">District</label>
+                <div class="col-sm-4">
+                  <select class="form-select" aria-label="district">
+                    <option selected></option>
+                    <option value="1">District 1</option>
+                    <option value="1">District 2</option>
+                    <option value="1">District 3</option>
+                    <option value="1">District 4</option>
+                </select>
+              </div>
+            </div> 
+            
+            <div class="mb-5 row">
+              <label for="state" class="col-sm-2 col-form-label form-label">City</label>
+              <div class="col-sm-4">
+                <select class="form-select" aria-label="state">
+                    <option selected></option>
+                    <option value="1">City 1</option>
+                    <option value="1">City 2</option>
+                    <option value="1">City 3</option>
+                    <option value="1">City 4</option>
+                </select>
+              </div>
+              <label for="email-id" class="col-sm-2 col-form-label form-label">PIN Code</label>
+              <div class="col-sm-4">
+                <select class="form-select" aria-label="district">
+                  <option selected></option>
+                  <option value="1">PIN Code 1</option>
+                  <option value="1">PIN Code 2</option>
+                  <option value="1">PIN Code 3</option>
+                  <option value="1">PIN Code 4</option>
+              </select>
+            </div>
+          </div> 
+            <div class="mt-3 mb-5 d-flex justify-content-center align-items-center">
+              <div class="col-sm-3">
+                <div class="ttw_button_container">
+                    <button class="ttw_button" type="submit">Search</button>
+                </div>
+            </div>
+            </div>
+    
+              <div class="mb-3 row table-responsive">
+                <table class="table table-bordered">
+                    <thead class="bg-blue">
+                      <tr>
+                        <th scope="col">Grievance ID</th>
+                        <th scope="col">Consumer ID</th>
+                        <th scope="col">Order ID</th>                       
+                        <th scope="col">Grievance</th>
+                        <th scope="col">Date of Complaints</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Taken Days To Resolve</th>                       
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                      </tr>
+                      <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                      </tr>
+                      <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+            </div>
+          
+
+            
+                  
+            
+                 
+              </div>
+            </div>
+           
+  
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  </section>
+  <app-footer></app-footer>
+  <router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
