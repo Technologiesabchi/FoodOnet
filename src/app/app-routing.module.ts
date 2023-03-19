@@ -42,6 +42,7 @@ import { ProductListComponent } from './Components/Super-admin/Superadmin-produc
 import { AddNewProductsComponent } from './Components/Super-admin/Superadmin-product-management/add-new-products/add-new-products.component';
 import { HSNCodeListComponent } from './Components/Super-admin/Superadmin-product-management/hsn-code-list/hsn-code-list.component';
 import { SuperadminCosumerGrievencesComponent } from './Components/Super-admin/superadmin-cosumer-grievences/superadmin-cosumer-grievences.component';
+import { SuperadminFinancialManagementComponent } from './Components/Super-admin/superadmin-financial-management/superadmin-financial-management.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"Homepage", pathMatch:"full"},
@@ -86,6 +87,7 @@ const routes: Routes = [
   {path: 'superadmin_add-new-product', component: AddNewProductsComponent},
   {path: 'superadmin_HSN-List', component: HSNCodeListComponent},
   {path: 'superadmin_consumer_grievences', component: SuperadminCosumerGrievencesComponent},
+  {path: 'superadmin_financial_management', component: SuperadminFinancialManagementComponent},
 ];
 
 @NgModule({

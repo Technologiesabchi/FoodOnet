@@ -95,3 +95,10 @@ button.ttw_button{
     margin-right: 14px;
   }
 
+  .modify-button {
+    margin-left: 4px;
+  }
+
+  .export-btn {
+    margin-left: -11px
+  }

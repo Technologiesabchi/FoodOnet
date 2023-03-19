@@ -67,6 +67,7 @@ import { ProductListComponent } from './Components/Super-admin/Superadmin-produc
 import { AddNewProductsComponent } from './Components/Super-admin/Superadmin-product-management/add-new-products/add-new-products.component';
 import { HSNCodeListComponent } from './Components/Super-admin/Superadmin-product-management/hsn-code-list/hsn-code-list.component';
 import { SuperadminCosumerGrievencesComponent } from './Components/Super-admin/superadmin-cosumer-grievences/superadmin-cosumer-grievences.component';
+import { SuperadminFinancialManagementComponent } from './Components/Super-admin/superadmin-financial-management/superadmin-financial-management.component';
 
 
 @NgModule({
@@ -129,6 +130,7 @@ import { SuperadminCosumerGrievencesComponent } from './Components/Super-admin/s
     AddNewProductsComponent,
     HSNCodeListComponent,
     SuperadminCosumerGrievencesComponent,
+    SuperadminFinancialManagementComponent,
   
     
 
