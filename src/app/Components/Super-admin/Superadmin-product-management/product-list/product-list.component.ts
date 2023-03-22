@@ -19,6 +19,7 @@ export class ProductListComponent implements OnInit {
   selectedProdCat: string = '';
   selectedProdSubCat: string = '';
   selectedProdName: string = '';
+  selectedProdDesc: string = '';
   selectedProdHsnCode: string = '';
   imageData: any = '';
 
@@ -92,6 +93,7 @@ export class ProductListComponent implements OnInit {
     this.selectedProdName = p.name;
     this.selectedProdSubCat = p.sub_category;
     this.selectedProdHsnCode = p.hsn_code;
+    this.selectedProdDesc = p?.description;
   }
 
   deleteProduct() {
@@ -120,6 +122,7 @@ export class ProductListComponent implements OnInit {
   modifyProduct() {
     let params = {
       name: this.selectedProdName,
+      description: this.selectedProdDesc,
       image_url: this.imageData,
       category: this.selectedProdCat,
       sub_category: this.selectedProdSubCat,

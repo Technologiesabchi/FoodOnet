@@ -33,6 +33,7 @@ export class AddNewProductsComponent implements OnInit {
   ngOnInit(): void {
     this.addProductForm = this.formBuilder.group({
       name: ['', Validators.required],
+      description: ['', Validators.required],
       type: ['grocery', Validators.required],
       image_url: [''],
       category: ['', Validators.required],
