@@ -109,7 +109,7 @@
                           <td>{{p.category}}</td>
                           <td>{{p.sub_category}}</td>
                           <td>{{p.name}}</td>
-                          <td></td>
+                          <td>{{p.description}}</td>
                           <td>{{p.hsn_code}}</td>
                           <td></td>
                           <td></td>
@@ -222,7 +222,7 @@
       <label for="Prodct Description-modal" class="col-sm-4 form-label">Product Description</label>
       <div class="col-sm-8">
  
-      <textarea class="form-control" id="Product Description-modal" rows="2"></textarea>
+      <textarea class="form-control" id="Product Description-modal" rows="2" [(ngModel)]="selectedProdDesc"></textarea>
     </div>
     </div>
     <div class="mb-3 row">
