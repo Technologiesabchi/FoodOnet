@@ -96,7 +96,7 @@ export class AuthService {
     );
   }
 
-  /** Product Management API */
+  /** Product Management API Start */
   addProduct(productList: any): Observable<any> {
     let api = `${this.endpoint}/product/add`;
     return this.http.post(api, productList).pipe(catchError(this.handleError));
@@ -118,6 +118,19 @@ export class AuthService {
     let api = `${this.endpoint}/product/modify/${id}`;
     return this.http.put(api, productList).pipe(catchError(this.handleError));
   }
+  /** Product Management API End */
+
+  /** Product Management API Start */
+  addAdminUser(user: any): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "Content-Type": "multipart/form-data"
+      })
+    };
+    let api = `${this.endpoint}/user/create-admin`;
+    return this.http.post(api, user).pipe(catchError(this.handleError));
+  }
+  /** Product Management API End */
 
 
   // Error

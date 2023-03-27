@@ -10,143 +10,143 @@
         </div>
         <div class="col-12 col-md-9 col-lg-9 col-xl-9">
           <div class="card shadow-2-strong" style="border-radius: 1rem; background-color:#f8f9fa;">
-            <div class="card-body p-5">
-  
-              <h2 class="mb-5 text-center">Add New Admin / User</h2>
-             
-              <h6 class="mb-3 text-center text-danger">(All Fields Are Mandatory)</h6>
-              
-              <div class="super_admin_login">
-                
-                <div class="mb-3 row">
-                 <div class="col-md-8">  
-                <div class="mb-3 row">
-                    <label for="trade_no" class="col-sm-3 col-form-label form-label">Emp Code</label>
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" id="admin_emp_code" >
+            <form [formGroup]="addAdminForm" (ngSubmit)="onSubmit()">
+              <div class="card-body p-5">
+            
+                <h2 class="mb-5 text-center">Add New Admin / User</h2>
+            
+                <h6 class="mb-3 text-center text-danger">(All Fields Are Mandatory)</h6>
+            
+                <div class="super_admin_login">
+            
+                  <div class="mb-3 row">
+                    <div class="col-md-8">
+                      <div class="mb-3 row">
+                        <label for="trade_no" class="col-sm-3 col-form-label form-label">Emp Code</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="admin_emp_code" formControlName="emp_code">
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="trade_no" class="col-sm-3 col-form-label form-label">First Name</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="admin_first_name" formControlName="fname">
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="trade_no" class="col-sm-3 col-form-label form-label">Last Name</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="admin_last_name" formControlName="lname">
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="trade_no" class="col-sm-3 col-form-label form-label">Email ID</label>
+                        <div class="col-sm-9">
+                          <input type="email" class="form-control" id="admin_email" formControlName="email">
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="trade_no" class="col-sm-3 col-form-label form-label">Mobile No.</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="admin_mobile_no" formControlName="mobile">
+                        </div>
+                      </div>
                     </div>
-                </div> 
-                <div class="mb-3 row">
-                    <label for="trade_no" class="col-sm-3 col-form-label form-label">First Name</label>
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" id="admin_first_name" >
+                    <div class="col-md-4 text-center">
+                      <label for="upload-image" class="col-sm-12 col-form-label form-label text-center">Upload Profile Image</label>
+                      <div class="mb-3 text-center"><img [src]="url" width="125" height="" alt="img"></div>
+            
+                      <div class="mb-3 text-center"><input type="file" accept="image/png, image/gif, image/jpeg"
+                          (change)="selectFile($event)"></div>
+            
+            
                     </div>
-                </div>  
-                <div class="mb-3 row">
-                    <label for="trade_no" class="col-sm-3 col-form-label form-label">Last Name</label>
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" id="admin_last_name" >
-                    </div>
-                </div>   
-                <div class="mb-3 row">
-                    <label for="trade_no" class="col-sm-3 col-form-label form-label">Email ID</label>
-                    <div class="col-sm-9">
-                      <input type="email" class="form-control" id="admin_email" >
-                    </div>
-                </div> 
-                <div class="mb-3 row">
-                    <label for="trade_no" class="col-sm-3 col-form-label form-label">Mobile No.</label>
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" id="admin_mobile_no" >
-                    </div>
-                </div> 
-                 </div> 
-                 <div class="col-md-4 text-center">
-                    <label for="upload-image" class="col-sm-12 col-form-label form-label text-center">Upload Profile Image</label>
-                    <div class="mb-3 text-center"><img [src]="url" width="125" height="" alt="img"></div>
-                    
-                    <div class="mb-3 text-center"><input type="file" accept="image/png, image/gif, image/jpeg" (change)="selectFile($event)"></div>
-                    
-                    
-                 </div>
-                </div>
-                
-              
-                <div class="mb-3 row">
+                  </div>
+            
+            
+                  <div class="mb-3 row">
                     <label for="pan_admin" class="col-sm-2 col-form-label form-label">PAN No.</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="pan_admin" >
+                      <input type="text" class="form-control" id="pan_admin" formControlName="pan">
                     </div>
                     <label for="adhar_no" class="col-sm-2 col-form-label form-label">ADHAR No.</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="adhar_admin" >
+                      <input type="text" class="form-control" id="adhar_admin" formControlName="adhaar">
                     </div>
-                </div> 
-                <div class="mb-3 row">
+                  </div>
+                  <div class="mb-3 row">
                     <label for="trade_no" class="col-sm-2 col-form-label form-label">Address 1</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="admin_address1" >
+                      <input type="text" class="form-control" id="admin_address1" formControlName="addr_line1">
                     </div>
-                </div> 
-                <div class="mb-3 row">
+                  </div>
+                  <div class="mb-3 row">
                     <label for="trade_no" class="col-sm-2 col-form-label form-label">Address 2</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="admin_address2" >
+                      <input type="text" class="form-control" id="admin_address2" formControlName="addr_line2">
                     </div>
-                </div>
-                <div class="mb-3 row">
+                  </div>
+                  <div class="mb-3 row">
                     <label for="pan_admin" class="col-sm-2 col-form-label form-label">Police Stn.</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_ps" >
+                      <input type="text" class="form-control" id="admin_ps" formControlName="police_station">
                     </div>
                     <label for="adhar_no" class="col-sm-2 col-form-label form-label">Post Office</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_po" >
+                      <input type="text" class="form-control" id="admin_po" formControlName="post_office">
                     </div>
-                </div> 
-                <div class="mb-3 row">
+                  </div>
+                  <div class="mb-3 row">
                     <label for="pan_admin" class="col-sm-2 col-form-label form-label">City</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_city" >
+                      <input type="text" class="form-control" id="admin_city" formControlName="city">
                     </div>
                     <label for="adhar_no" class="col-sm-2 col-form-label form-label">District</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_district" >
+                      <input type="text" class="form-control" id="admin_district" formControlName="district">
                     </div>
-                </div> 
-                <div class="mb-3 row">
+                  </div>
+                  <div class="mb-3 row">
                     <label for="pan_admin" class="col-sm-2 col-form-label form-label">State</label>
                     <div class="col-sm-4">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Select State</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                      <select class="form-select" aria-label="Default select example" formControlName="state">
+                        <option value="WB">West Bengal</option>
+                        <option value="BH">Bihar</option>
+                        <option value="JH">Jharkhand</option>
+                        <option value="OD">Odisha</option>
+                      </select>
                     </div>
                     <label for="adhar_no" class="col-sm-2 col-form-label form-label">Pincode</label>
                     <div class="col-sm-4">
-                      <input type="text" class="form-control" id="admin_pincode" >
+                      <input type="text" class="form-control" id="admin_pincode" formControlName="pincode">
                     </div>
-                </div> 
-                <div class="mb-3 row">
+                  </div>
+                  <div class="mb-3 row">
                     <label for="pan_admin" class="col-sm-2 col-form-label form-label">Country</label>
                     <div class="col-sm-10">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Select Country</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                      <select class="form-select" aria-label="Default select example" formControlName="country">
+                        <option value="India">India</option>
+                      </select>
                     </div>
-                    
-                </div> 
-                
-              
-                <div class="d-flex justify-content-center align-items-center">
-                 
-     
-                  <div class="col-sm-3">
-                      <div class="ttw_button_container">
-                          <button class="ttw_button" type="submit" >Submit</button>
-                      </div>
+            
                   </div>
-                 
+            
+            
+                  <div class="d-flex justify-content-center align-items-center">
+            
+            
+                    <div class="col-sm-3">
+                      <div class="ttw_button_container">
+                        <button class="ttw_button" type="submit">Submit</button>
+                      </div>
+                    </div>
+            
+                  </div>
                 </div>
+            
+            
               </div>
-           
-  
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -155,11 +155,16 @@
   <app-footer></app-footer>
   <router-outlet></router-outlet>
 
-
-
-
-
-
-
-
-
+  <div class="modal fade" id="addAdminSuccessModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success">
+          <h5 class="modal-title" style="color: black; font-weight: 500;">Success</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Admin added successfully</p>
+        </div>
+      </div>
+    </div>
+  </div>
