@@ -62,6 +62,7 @@ box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.24);
     padding: 3px;
 } 
 .align_r{ text-align: right;} 
+.pro_name:hover{cursor: pointer;}
 .pro_price{
     font-family: Tahoma, "Trebuchet MS", sans-serif;
     color: #000;
