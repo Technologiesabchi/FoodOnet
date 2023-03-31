@@ -17,13 +17,13 @@
     <a routerLink="/"> <img src="assets/images/logo.png" width="80%" class='img-fluid' alt="image"></a>
     </div> 
     <div class="col-6"><div class="input-group mb-3">
-        <input type="text" class="form-control check-pin" placeholder="Check Availability"  >
+        <input type="text" class="form-control check-pin" placeholder="Search Product"  >
         <button class="btn pin-search" type="button" ><i class="fa fa-search" aria-hidden="true"></i></button>
       </div></div>  
     <div class="col-3">
         <ul class="top-right-cart">
             <li><button class="btn download-app" type="button" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download App</button></li>
-            <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+            <li><i class="fa fa-heart-o" aria-hidden="true" routerLink="/my_wishlist"></i></li>
             <li (click)="openCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
         </ul>
 

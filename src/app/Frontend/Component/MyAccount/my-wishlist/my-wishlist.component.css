@@ -95,5 +95,6 @@ margin-right: 0px !important;
     background: #00b3a1;
     color: #fff;
 }
+.out_stock{border: 1px solid #ed7e20;color: #ed7e20; pointer-events: none;}
 .cat_title_wrap{ background-color: #ccf0ec; margin-bottom: 20px; padding: 13px;}
 .product_cat_title{font-family: Tahoma, "Trebuchet MS", sans-serif;color: #222; font-size: 18px; font-weight: 600;}

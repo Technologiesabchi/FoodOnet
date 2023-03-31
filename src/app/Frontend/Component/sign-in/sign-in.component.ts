@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
-  otp:any;
+  visible:boolean = false;
+
+  onclick()
+  {
+   
+    this.visible = !this.visible
+  }
 }

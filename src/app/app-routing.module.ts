@@ -32,8 +32,10 @@ import { VendorSignupDocumentUploadComponent } from './Components/Vendors/vendor
 import { VendorSignupLegalInfoComponent } from './Components/Vendors/vendor-signup-legal-info/vendor-signup-legal-info.component';
 import { VendorSignupStep1Component } from './Components/Vendors/vendor-signup-step1/vendor-signup-step1.component';
 import { VendorSignupStep2Component } from './Components/Vendors/vendor-signup-step2/vendor-signup-step2.component';
+import { MyWishlistComponent } from './Frontend/Component/MyAccount/my-wishlist/my-wishlist.component';
 import { PaymentComponent } from './Frontend/Component/payment/payment.component';
 import { ProductCategoryComponent } from './Frontend/Component/product-category/product-category.component';
+import { ProductDetailsComponent } from './Frontend/Component/product-details/product-details.component';
 import { SignInComponent } from './Frontend/Component/sign-in/sign-in.component';
 import { UserSignupComponent } from './Frontend/Component/user-signup/user-signup.component';
 import { HomepageComponent } from './Frontend/homepage/homepage.component';
@@ -79,6 +81,8 @@ const routes: Routes = [
   { path: 'user_login', component: SignInComponent },
   { path: 'user_signup', component: UserSignupComponent },
   { path: 'product_category', component: ProductCategoryComponent },
+  { path: 'my_wishlist', component: MyWishlistComponent },
+  { path: 'product_details', component: ProductDetailsComponent },
 ];
 
 @NgModule({

@@ -1,25 +1,21 @@
 <app-frontend-header></app-frontend-header>
 <app-category-selection></app-category-selection>  
-<div class="row">
-    <div class="col-12">
-        <img src="assets/images/Category_banner.png" class="d-block w-100" alt="...">
-    </div>
-</div>
+
 <div class="container-fluid header_shadow mb-3">
     <div class="container pt-3 pb-3">
     <div class="row">   
-    <div class="col-12 product_bredcumb">Home / Product / Baby care</div>
+    <div class="col-12 product_bredcumb">My Account / My Wishlists</div>
     </div> 
     </div>
 </div>
 <div class="container">
     <div class="row">
         <div class="col-3">
-           <app-product-category-leftpanel></app-product-category-leftpanel>
+           <app-left-panel-myaccount></app-left-panel-myaccount>
         </div>
         <div class="col-9">
             <div class="row cat_title_wrap">
-            <div class="product_cat_title col-10">Bath & Hair Oil</div>
+            <div class="product_cat_title col-10">My Wishlists - 12 Products</div>
             <div class="col-2"> 
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
                 <option selected>Sort By :</option>
@@ -37,8 +33,8 @@
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
                     <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 210.00</span>&#8377; 195.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
+                    <div class="col-5 pro_price">&#8377; 195.00</div>
+                    <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
                     </div>
                 </li>
                 <li>
@@ -48,10 +44,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 600.00</span>&#8377; 449.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn out_stock">Out of Stock</button></div>
+                        </div>
                 </li>
                 <li>
                     <div class="pro_img"><img class="img-fluid" width="100px" src="assets/images/product_3.png" alt="Image 1"/></div>   
@@ -60,10 +56,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 65.00</span>&#8377; 49.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
+                        </div>
                 </li>
                 <li>
                     <div class="pro_img"><img class="img-fluid" width="100px" src="assets/images/product_4.png" alt="Image 1"/></div>   
@@ -72,10 +68,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 315.00</span>&#8377; 265.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
+                            </div>
                 </li>
                 <li>
                     <div class="pro_img"><img class="img-fluid" width="100px" src="assets/images/product_4.png" alt="Image 1"/></div>   
@@ -84,10 +80,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 315.00</span>&#8377; 265.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
+                            </div>
                 </li>
                 <li>
                     <div class="pro_img"><img class="img-fluid" width="100px" src="assets/images/product_4.png" alt="Image 1"/></div>   
@@ -96,10 +92,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 315.00</span>&#8377; 265.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
+                            </div>
                 </li>
                 <li>
                     <div class="pro_img"><img class="img-fluid" width="100px" src="assets/images/product_4.png" alt="Image 1"/></div>   
@@ -108,10 +104,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 315.00</span>&#8377; 265.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
+                            </div>
                 </li>
                 <li>
                     <div class="pro_img"><img class="img-fluid" width="100px" src="assets/images/product_4.png" alt="Image 1"/></div>   
@@ -120,10 +116,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 315.00</span>&#8377; 265.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
+                            </div>
                 </li>
                 <li>
                     <div class="pro_img"><img class="img-fluid" width="100px" src="assets/images/product_4.png" alt="Image 1"/></div>   
@@ -132,10 +128,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 315.00</span>&#8377; 265.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
+                            </div>
                 </li>
                 <li>
                     <div class="pro_img"><img class="img-fluid" width="100px" src="assets/images/product_4.png" alt="Image 1"/></div>   
@@ -144,10 +140,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 315.00</span>&#8377; 265.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
+                            </div>
                 </li>
                 <li>
                     <div class="pro_img"><img class="img-fluid" width="100px" src="assets/images/product_4.png" alt="Image 1"/></div>   
@@ -156,10 +152,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 315.00</span>&#8377; 265.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
+                            </div>
                 </li>
                 <li>
                     <div class="pro_img"><img class="img-fluid" width="100px" src="assets/images/product_4.png" alt="Image 1"/></div>   
@@ -168,10 +164,10 @@
                         <div class="pro_weight col-4">400 Gm</div>
                         <div class="pro_weight col-8 align_r">Qty : <input type="number" class="pro_qnty" value="1" min="0" max="10" step="1"/> </div>
                         </div>
-                    <div class="row">
-                    <div class="col-8 pro_price"><span>&#8377; 315.00</span>&#8377; 265.00</div>
-                    <div class="col-4"><button type="submit" class="add_btn">ADD</button></div>
-                    </div>
+                        <div class="row">
+                            <div class="col-5 pro_price">&#8377; 195.00</div>
+                            <div class="col-7 align_r"><button type="submit" class="add_btn">Move to Cart</button></div>
+                            </div>
                 </li>
                </ul>
                <div class="row d-flex justify-content-center align-items-center mb-3">
@@ -185,3 +181,4 @@
 
 <app-frontend-footer></app-frontend-footer>
 <router-outlet></router-outlet>
+

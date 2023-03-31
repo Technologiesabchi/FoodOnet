@@ -63,6 +63,9 @@ import { CategorySelectionComponent } from './Frontend/Component/category-select
 import { UserSignupComponent } from './Frontend/Component/user-signup/user-signup.component';
 import { ProductCategoryComponent } from './Frontend/Component/product-category/product-category.component';
 import { ProductCategoryLeftpanelComponent } from './Frontend/Component/product-category-leftpanel/product-category-leftpanel.component';
+import { MyWishlistComponent } from './Frontend/Component/MyAccount/my-wishlist/my-wishlist.component';
+import { LeftPanelMyaccountComponent } from './Frontend/Component/MyAccount/left-panel-myaccount/left-panel-myaccount.component';
+import { ProductDetailsComponent } from './Frontend/Component/product-details/product-details.component';
 
 
 @NgModule({
@@ -121,6 +124,9 @@ import { ProductCategoryLeftpanelComponent } from './Frontend/Component/product-
     UserSignupComponent,
     ProductCategoryComponent,
     ProductCategoryLeftpanelComponent,
+    MyWishlistComponent,
+    LeftPanelMyaccountComponent,
+    ProductDetailsComponent,
     
 
   ],
@@ -137,6 +143,7 @@ import { ProductCategoryLeftpanelComponent } from './Frontend/Component/product-
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true,
+      
      
     },
   ],

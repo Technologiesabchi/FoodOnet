@@ -52,9 +52,16 @@ box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.24);
     color: #686969;
     font-size: 12px;
     font-weight: 600;
-    padding: 0px 2px;
     margin-bottom: 10px;
 }
+.pro_qnty{
+    border: 1px solid #ccc;border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+    padding: 3px;
+} 
+.align_r{ text-align: right;} 
 .pro_price{
     font-family: Tahoma, "Trebuchet MS", sans-serif;
     color: #000;

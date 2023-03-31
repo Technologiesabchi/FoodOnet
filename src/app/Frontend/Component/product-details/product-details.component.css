@@ -1,0 +1,564 @@
+
+ 
+ .gallery {
+   
+   position: relative;
+   background: white;
+   width: 100%;
+   
+ }
+ .gallery input[name$="control"] {
+   display: none;
+ }
+ .gallery .carousel {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
+   position: relative;
+   height: 70vh;
+   width: 100%;
+ }
+ .gallery .wrap {
+   width: 100%;
+   height: 100%;
+   position: static;
+   margin: 0 auto;
+   overflow: hidden;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -ms-flex-wrap: nowrap;
+       flex-wrap: nowrap;
+   margin-right: 20px;
+ }
+ .gallery .wrap figure {
+   padding: 10px;
+   height: 100%;
+   min-width: 100%;
+   -webkit-transition: opacity 0.25s ease-in-out 0.05s;
+   transition: opacity 0.25s ease-in-out 0.05s;
+   position: relative;
+   left: 0;
+   -webkit-transform: translateX(0%);
+           transform: translateX(0%);
+   box-sizing: border-box;
+   text-align: center;
+   margin: 0;
+   display: block;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   opacity: 1;
+ }
+ .gallery .wrap figure label {
+   cursor: zoom-in;
+   height: auto;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   display: block;
+ }
+ .gallery .wrap figure img {
+   cursor: inherit;
+   height: auto;
+   max-width: 100%;
+   max-height: 100%;
+   border-radius: 3px;
+   margin: 0 auto;
+   position: relative;
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+           transform: translateY(-50%);
+ }
+ .gallery .thumbnails {
+   -webkit-box-flex: 1;
+       -ms-flex: 1;
+           flex: 1;
+   min-width: 60px;
+   max-height: 100%;
+   height: auto;
+   -webkit-box-flex: 0;
+       -ms-flex-positive: 0;
+           flex-grow: 0;
+   -ms-flex-item-align: center;
+       align-self: center;
+   -ms-flex-preferred-size: auto;
+       flex-basis: auto;
+   position: relative;
+   white-space: nowrap;
+   overflow: hidden;
+   overflow-y: auto;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   padding: 0 10px;
+   z-index: 20;
+ }
+ .gallery .thumbnails .thumb {
+   min-width: 60px;
+   height: 60px;
+   background-position: center center;
+   background-size: cover;
+   box-sizing: border-box;
+   opacity: 0.7;
+   margin: 5px 0;
+   -ms-flex-negative: 0;
+       flex-shrink: 0;
+   left: 0;
+   border-radius: 3px;
+   cursor: pointer;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   background-repeat: no-repeat;
+ }
+ .gallery .thumbnails .slider {
+   position: absolute;
+   display: block;
+   width: 5px;
+   height: calc(60px + 10px);
+   z-index: 2;
+   margin: 0;
+   left: 0;
+   -webkit-transition: all 0.33s cubic-bezier(0.3, 0, 0.33, 1);
+   transition: all 0.33s cubic-bezier(0.3, 0, 0.33, 1);
+ }
+ .gallery .thumbnails .slider .indicator {
+   width: 100%;
+   height: 30px;
+   max-height: calc(100% - 10px);
+   position: relative;
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+           transform: translateY(-50%);
+   background: #428BFF;
+   border-radius: 1px;
+ }
+ .gallery input#fullscreen:checked ~ .wrap figure {
+   position: fixed;
+   z-index: 10;
+   height: 100vh;
+   width: 100vw;
+   padding: 0;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-50%, -50%) !important;
+           transform: translate(-50%, -50%) !important;
+   -webkit-animation-timing-function: ease-in-out;
+           animation-timing-function: ease-in-out;
+   -webkit-animation-fill-mode: forwards;
+           animation-fill-mode: forwards;
+ }
+ .gallery input#fullscreen:checked ~ .wrap figure label {
+   cursor: zoom-out;
+ }
+ .gallery input#fullscreen:checked ~ .wrap figure label img {
+   -webkit-animation: shadow 0.2s;
+           animation: shadow 0.2s;
+   -webkit-animation-timing-function: ease-in-out;
+           animation-timing-function: ease-in-out;
+   -webkit-animation-direction: forwards;
+           animation-direction: forwards;
+   -webkit-animation-fill-mode: forwards;
+           animation-fill-mode: forwards;
+   border-radius: 0;
+ }
+ .gallery input#image1:checked ~ .wrap figure {
+   -webkit-transform: translateX(0);
+           transform: translateX(0);
+ }
+ .gallery input#image1:checked ~ .wrap figure:not(:nth-of-type(1)) {
+   opacity: 0;
+ }
+ .gallery input#image1:checked ~ .thumbnails .slider {
+   -webkit-transform: translateY(0);
+           transform: translateY(0);
+ }
+ .gallery input#image1:checked ~ .thumbnails .thumb:nth-of-type(1) {
+   opacity: 1;
+   cursor: default;
+ }
+ .gallery input#image2:checked ~ .wrap figure {
+   -webkit-transform: translateX(-100%);
+           transform: translateX(-100%);
+ }
+ .gallery input#image2:checked ~ .wrap figure:not(:nth-of-type(2)) {
+   opacity: 0;
+ }
+ .gallery input#image2:checked ~ .thumbnails .slider {
+   -webkit-transform: translateY(100%);
+           transform: translateY(100%);
+ }
+ .gallery input#image2:checked ~ .thumbnails .thumb:nth-of-type(2) {
+   opacity: 1;
+   cursor: default;
+ }
+ .gallery input#image3:checked ~ .wrap figure {
+   -webkit-transform: translateX(-200%);
+           transform: translateX(-200%);
+ }
+ .gallery input#image3:checked ~ .wrap figure:not(:nth-of-type(3)) {
+   opacity: 0;
+ }
+ .gallery input#image3:checked ~ .thumbnails .slider {
+   -webkit-transform: translateY(200%);
+           transform: translateY(200%);
+ }
+ .gallery input#image3:checked ~ .thumbnails .thumb:nth-of-type(3) {
+   opacity: 1;
+   cursor: default;
+ }
+ .gallery input#image4:checked ~ .wrap figure {
+   -webkit-transform: translateX(-300%);
+           transform: translateX(-300%);
+ }
+ .gallery input#image4:checked ~ .wrap figure:not(:nth-of-type(4)) {
+   opacity: 0;
+ }
+ .gallery input#image4:checked ~ .thumbnails .slider {
+   -webkit-transform: translateY(300%);
+           transform: translateY(300%);
+ }
+ .gallery input#image4:checked ~ .thumbnails .thumb:nth-of-type(4) {
+   opacity: 1;
+   cursor: default;
+ }
+ 
+ @-webkit-keyframes full {
+   from {
+     -webkit-transform: translate(-50%, -50%) scale(0.8);
+             transform: translate(-50%, -50%) scale(0.8);
+   }
+   to {
+     -webkit-transform: translate(-50%, -50%) scale(1);
+             transform: translate(-50%, -50%) scale(1);
+   }
+ }
+ 
+ @keyframes full {
+   from {
+     -webkit-transform: translate(-50%, -50%) scale(0.8);
+             transform: translate(-50%, -50%) scale(0.8);
+   }
+   to {
+     -webkit-transform: translate(-50%, -50%) scale(1);
+             transform: translate(-50%, -50%) scale(1);
+   }
+ }
+ @-webkit-keyframes shadow {
+   from {
+     box-shadow: 0 0 0 100vmin rgba(24, 33, 45, 0), 0 0 10vmin rgba(13, 21, 31, 0);
+   }
+   to {
+     box-shadow: 0 0 0 100vmin rgba(24, 33, 45, 0.6), 0 0 10vmin rgba(13, 21, 31, 0.6);
+   }
+ }
+ @keyframes shadow {
+   from {
+     box-shadow: 0 0 0 100vmin rgba(24, 33, 45, 0), 0 0 10vmin rgba(13, 21, 31, 0);
+   }
+   to {
+     box-shadow: 0 0 0 100vmin rgba(24, 33, 45, 0.6), 0 0 10vmin rgba(13, 21, 31, 0.6);
+   }
+ }
+
+ .product_cat_title{font-family: Tahoma, "Trebuchet MS", sans-serif;color: #222; font-size: 18px; font-weight: 600;}
+ .pro_name{ color: #00b3a1;
+    font-size: 12px;
+    margin: 5px 0px;
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+.pro_weight{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #686969;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.pro_qnty{
+    border: 1px solid #ccc;border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+    padding: 3px;
+} 
+.align_r{ text-align: right;} 
+.pro_price{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    padding-top: 3px;
+}
+.pro_price span{
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #686969;
+    font-size: 12px;
+    font-weight: 100;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.pro_desc{ font-family: Tahoma, "Trebuchet MS", sans-serif;
+    color: #000;
+    font-size: 14px;
+    font-weight:normal;
+    padding-top: 3px;}
+
+    .pro_price{
+        font-family: Tahoma, "Trebuchet MS", sans-serif;
+        color: #ed7e20;
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 3px;
+    }
+    .pro_price span{
+        font-family: Tahoma, "Trebuchet MS", sans-serif;
+        color: #686969;
+        font-size: 17px;
+        font-weight: 100;
+        text-decoration: line-through;
+        margin-right: 10px;
+    }
+    .pro_weight .btn{margin-right: 10px;}
+    .pro_qnty{
+        border: 1px solid #ccc;border-radius: 10px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #222;
+        padding: 3px;
+    } 
+
+    .add_btn{
+        border: 1px solid #00b3a1;
+        font-family: Tahoma, "Trebuchet MS", sans-serif;
+        color: #fff;
+        padding: 0px 10px;
+        border-radius: 5px;
+        background: #00b3a1;
+        font-size: 18px;
+    }
+    .add_btn:hover{
+        cursor: pointer;
+        background: #fff;
+        color: #00b3a1;
+    }
+
+    .add_btn_wish{
+        border: 1px solid #ed7e20;
+        font-family: Tahoma, "Trebuchet MS", sans-serif;
+        color: #fff;
+        padding: 0px 10px;
+        border-radius: 5px;
+        background: #ed7e20;
+        font-size: 18px;
+    }
+    .add_btn_wish:hover{
+        cursor: pointer;
+        background: #fff;
+        color: #ed7e20;
+    }
+    .nav-item{margin-right: 5px;}
+    .nav-item a{color: #00b3a1;border-left: 1px solid #00b3a1;border-right: 1px solid #00b3a1;border-top: 1px solid #00b3a1;}
+    .tab-content{border-bottom:1px solid #dee2e6;border-right:1px solid #dee2e6;border-left:1px solid #dee2e6; margin-top: 0px !important;}
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{background-color: #00b3a1; color: #fff;}
+
+
+    .total-like-user-main a {
+        display: inline-block;
+        margin: 0 -17px 0 0;
+    }
+    .total-like {
+        border: 1px solid;
+        border-radius: 50px;
+        display: inline-block;
+        font-weight: 500;
+        height: 34px;
+        line-height: 33px;
+        padding: 0 13px;
+        vertical-align: top;
+    }
+    .restaurant-detailed-ratings-and-reviews hr {
+        margin: 0 -24px;
+    }
+    .graph-star-rating-header .star-rating {
+        font-size: 17px;
+    }
+    .progress {
+        background: #f2f4f8 none repeat scroll 0 0;
+        border-radius: 0;
+        height: 30px;
+    }
+    .rating-list {
+        display: inline-flex;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .rating-list-left {
+        height: 16px;
+        line-height: 29px;
+        width: 10%;
+    }
+    .rating-list-center {
+        width: 80%;
+    }
+    .rating-list-right {
+        line-height: 29px;
+        text-align: right;
+        width: 10%;
+    }
+    .restaurant-slider-pics {
+        bottom: 0;
+        font-size: 12px;
+        left: 0;
+        z-index: 999;
+        padding: 0 10px;
+    }
+    .restaurant-slider-view-all {
+        bottom: 15px;
+        right: 15px;
+        z-index: 999;
+    }
+    .offer-dedicated-nav .nav-link.active,
+    .offer-dedicated-nav .nav-link:hover,
+    .offer-dedicated-nav .nav-link:focus {
+        border-color: #3868fb;
+        color: #3868fb;
+    }
+    .offer-dedicated-nav .nav-link {
+        border-bottom: 2px solid #fff;
+        color: #000000;
+        padding: 16px 0;
+        font-weight: 600;
+    }
+    .offer-dedicated-nav .nav-item {
+        margin: 0 37px 0 0;
+    }
+    .restaurant-detailed-action-btn {
+        margin-top: 12px;
+    }
+    .restaurant-detailed-header-right .btn-success {
+        border-radius: 3px;
+        height: 45px;
+        margin: -18px 0 18px;
+        min-width: 130px;
+        padding: 7px;
+    }
+    .text-black {
+        color: #000000;
+    }
+    .icon-overlap {
+        bottom: -23px;
+        font-size: 74px;
+        opacity: 0.23;
+        position: absolute;
+        right: -32px;
+    }
+    .menu-list img {
+        width: 41px;
+        height: 41px;
+        object-fit: cover;
+    }
+    .restaurant-detailed-header-left img {
+        width: 88px;
+        height: 88px;
+        border-radius: 3px;
+        object-fit: cover;
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    }
+    .reviews-members .media .mr-3 {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+    }
+    .rounded-pill {
+        border-radius: 50rem!important;
+    }
+    .total-like-user {
+        border: 2px solid #fff;
+        height: 34px;
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+        width: 34px;
+    }
+    .total-like-user-main a {
+        display: inline-block;
+        margin: 0 -17px 0 0;
+    }
+    .total-like {
+        border: 1px solid;
+        border-radius: 50px;
+        display: inline-block;
+        font-weight: 500;
+        height: 34px;
+        line-height: 33px;
+        padding: 0 13px;
+        vertical-align: top;
+    }
+    .restaurant-detailed-ratings-and-reviews hr {
+        margin: 0 -24px;
+    }
+    .graph-star-rating-header .star-rating {
+        font-size: 17px;
+    }
+    .progress {
+        background: #f2f4f8 none repeat scroll 0 0;
+        border-radius: 0;
+        height: 30px;
+    }
+    .rating-list {
+        display: inline-flex;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .rating-list-left {
+        height: 16px;
+        line-height: 29px;
+        width: 10%;
+    }
+    .rating-list-center {
+        width: 80%;
+    }
+    .rating-list-right {
+        line-height: 29px;
+        text-align: right;
+        width: 10%;
+    }
+    .restaurant-slider-pics {
+        bottom: 0;
+        font-size: 12px;
+        left: 0;
+        z-index: 999;
+        padding: 0 10px;
+    }
+    .restaurant-slider-view-all {
+        bottom: 15px;
+        right: 15px;
+        z-index: 999;
+    }
+    
+    .progress {
+        background: #f2f4f8 none repeat scroll 0 0;
+        border-radius: 0;
+        height: 30px;
+    }
+    .tab-pane p{padding-top: 20px;}
+
+ 
