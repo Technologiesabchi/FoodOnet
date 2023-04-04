@@ -17,6 +17,7 @@ export class AuthService {
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   currentUser = {};
   pinlocation = {};
+  selectedEmp = null;
   constructor(private http: HttpClient, public router: Router) { }
   // Sign-up
   signUp(user: User): Observable<any> {
@@ -120,7 +121,7 @@ export class AuthService {
   }
   /** Product Management API End */
 
-  /** Product Management API Start */
+  /** User Management API Start */
   addAdminUser(user: any): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -130,7 +131,25 @@ export class AuthService {
     let api = `${this.endpoint}/user/create-admin`;
     return this.http.post(api, user).pipe(catchError(this.handleError));
   }
-  /** Product Management API End */
+
+  searchAdmin(empId: string, userType: string): Observable<any> {
+    let api = `${this.endpoint}/user/search?search_text=${empId}&user_type=${userType}`;
+    return this.http
+      .get(api)
+      .pipe(tap(), catchError(this.handleError));
+  }
+
+  editAdminUser(user: any, empId: string): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "Content-Type": "multipart/form-data"
+      })
+    };
+    let api = `${this.endpoint}/user/update-admin/${empId}`;
+    return this.http.post(api, user).pipe(catchError(this.handleError));
+  }
+
+  /** User Management API End */
 
 
   // Error
