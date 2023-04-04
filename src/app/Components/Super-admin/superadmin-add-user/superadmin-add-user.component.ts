@@ -78,7 +78,6 @@ export class SuperadminAddUserComponent implements OnInit {
     fd.append('file', this.imageData);
 
     $('.overlay').show();
-    this.authService.addAdminUser(fd)
     this.authService.addAdminUser(fd).subscribe((res: any) => {
       $('.overlay').hide();
       $("#addAdminSuccessModal").modal('show');

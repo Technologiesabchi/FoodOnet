@@ -18,11 +18,9 @@
                 <div class="mb-3 row">
                   <label for="inputPassword" class="col-sm-3 col-form-label form-label">Search By</label>
                   <div class="col-sm-9">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Select User Type</option>
-                        <option value="1">Admin</option>
-                        <option value="2">Vendor</option>
-                       
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="userType">
+                        <option value="admin">Admin</option>
+                        <option value="vendor">Vendor</option>
                     </select>
                   </div>
                 </div> 
@@ -31,7 +29,7 @@
                     <div class="mb-3 row">
                         <label for="trade_no" class="col-sm-3 col-form-label form-label">Name / Emp Code</label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" id="emp_code" >
+                          <input type="text" class="form-control" id="emp_code" [(ngModel)]="empId" >
                         </div>
                     </div> 
                  
@@ -42,7 +40,7 @@
                     
                     <div class="col-sm-3">
                       <div class="ttw_button_container">
-                          <button class="ttw_button" type="submit">Search</button>
+                          <button class="ttw_button" type="submit" (click)="searchUser()">Search</button>
                       </div>
                   </div>
                   </div>
@@ -65,27 +63,15 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr *ngFor="let emp of empList; let i = index;">
                             <th scope="row">
-                                <input class="form-check-input" name="edit-user" type="radio" value="" id="flexCheckDefault">
-                              </th>
-                            <td>PD1232323</td>
-                            <td>Otto</td>
-                            <td>Admin</td>
-                            <td>abc@gmail.com</td>
-                            <td>1234567898</td>
-                           
-                          </tr>
-                          <tr>
-                            <th scope="row">
-                                <input class="form-check-input" name="edit-user" type="radio" value="" id="flexCheckDefault">
-                              </th>
-                            <td>PD1232323</td>
-                            <td>Food Lovers</td>
-                            <td>Vendor</td>
-                            <td>abc@gmail.com</td>
-                            <td>1234567898</td>
-                            
+                              <input class="form-check-input" name="edit-user" type="radio" value="" id="emp-row-{{i}}" (change)="selectUser(emp)">
+                            </th>
+                            <td>{{emp.user_extra_details.emp_code}}</td>
+                            <td>{{emp.name}}</td>
+                            <td>{{emp.role}}</td>
+                            <td>{{emp.email}}</td>
+                            <td>{{emp.mobile}}</td>
                           </tr>
                          
                         </tbody>
@@ -96,7 +82,7 @@
                  
                   
                     <div class="ttw_button_container">
-                        <button class="ttw_button" type="submit" (click)="redirectToedituser()">View/Edit</button>
+                        <button class="ttw_button" type="submit" (click)="redirectToedituser()" [disabled]="!selectedEmp">View/Edit</button>
                     </div>
                 
                   &nbsp;
