@@ -80,10 +80,15 @@ export class SuperadminAddUserComponent implements OnInit {
     $('.overlay').show();
     this.authService.addAdminUser(fd).subscribe((res: any) => {
       $('.overlay').hide();
-      $("#addAdminSuccessModal").modal('show');
-      this.addAdminForm.reset();
-      this.url = "assets/images/User-Profile.png";
-      this.imageData = null;
+      if (res && res.url) {
+        $("#addAdminSuccessModal").modal('show');
+        this.addAdminForm.reset();
+        this.url = "assets/images/User-Profile.png";
+        this.imageData = null;
+        window.location.reload();
+      } else {
+        alert('Please fill all fields.');
+      }
     }, (err: any) => {
       $('.overlay').hide();
       let errMsg = err.split('\n')[1].split(':')[1];
