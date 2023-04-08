@@ -96,6 +96,16 @@ export class SuperadminEditUserComponent implements OnInit {
     })
   }
 
+  deleteUser() {
+    $('.overlay').show();
+    this.authService.deleteAdmin(this.empID).subscribe((res: any) => {
+      $('.overlay').hide();
+      this.onClose();
+    }, (err: any) => {
+      $('.overlay').hide();
+    })
+  }
+
   onClose() {
     window.location.reload();
   }

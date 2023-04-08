@@ -149,6 +149,11 @@ export class AuthService {
     return this.http.post(api, user).pipe(catchError(this.handleError));
   }
 
+  deleteAdmin(id: any): Observable<any> {
+    let api = `${this.endpoint}/user/delete-admin/${id}`;
+    return this.http.delete(api).pipe(catchError(this.handleError));
+  }
+
   /** User Management API End */
 
 
