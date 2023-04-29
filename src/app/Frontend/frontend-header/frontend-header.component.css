@@ -86,3 +86,80 @@
 -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
 box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
 }
+
+@media screen and (min-width:350px) and (max-width:600px) {
+    .fa-shopping-cart {
+        margin-left: 2px;
+    }
+
+   
+   
+    .navbar {
+        font-size:12px;
+    }
+
+    
+    .row-part-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+     }
+
+     div.web-ver{
+        display:none;
+     }
+     
+     
+     .web-ver-logo{
+        display:none;
+     }
+
+    .mobile-ver-logo{
+        width: 20%;
+        margin-left: 4vw;
+    }
+
+    .web-ver-search{
+        display: none;
+
+    }
+
+    .mobile-ver{
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    .customer-care-text {
+        display: none;
+    }
+
+    .login-web-version {
+        display: none;
+    }
+
+    .login-section {
+        justify-content: center;
+    }
+
+   
+    }
+  
+       
+    
+   
+
+   
+
+     
+
+    
+
+
+    @media screen and (min-width: 601px) {
+        .download-icon-res{display:none; }
+        .responsive-row{display:none;}
+        .mobile-ver-logo{display:none;}
+        .mobile-ver-search{display:none;}
+        .mobile-ver{display:none;}
+        .login-responsive-version{display:none;}
+    }
