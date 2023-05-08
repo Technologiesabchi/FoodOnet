@@ -141,6 +141,15 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
         justify-content: center;
     }
 
+    .download-app {
+    min-width: 45vw;
+    border-radius: 5px;
+    }
+
+    .search-holder {
+        font-size: 12px
+    }
+
    
     }
   
