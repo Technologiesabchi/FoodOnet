@@ -1,38 +1,65 @@
 <div class="overlay"><div class="spinner"></div></div>
 <div class="header_shadow">
 <header class="navbar navbar-expand-lg bg-header">
-  <div class="container">
-    <div class="top-left no-padding">Customer Care: 1234567890 is available from 10am to 8pm for any queries, feedback or issues</div>
-    <div class="top-right" id="login_fnc" >
+  <div class="container login-section">
+    <div class="top-left no-padding customer-care-text">Customer Care: 1234567890 is available from 10am to 8pm for any queries, feedback or issues</div>
+    <div class="top-right login-web-version" id="login_fnc" >
       <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;<a *ngIf="!this.authService.isLoggedIn" routerLink="/user_login">User Login / Sign Up</a>&nbsp;<a (click)="logout()" *ngIf="this.authService.isLoggedIn" >Logout</a> |&nbsp;
       <i class="fa fa-user-secret" aria-hidden="true"></i>&nbsp;<a routerLink="/admin">Admin Login</a>
+      </div>
+
+      <div class="top-right login-responsive-version" id="login_fnc" >
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;<a *ngIf="!this.authService.isLoggedIn" routerLink="/user_login">User Login / Sign Up</a>&nbsp;<a (click)="logout()" *ngIf="this.authService.isLoggedIn" >Logout</a> |&nbsp;
+        <i class="fa fa-user-secret" aria-hidden="true"></i>&nbsp;<a routerLink="/admin">Admin Login</a>
+        </div>
+    </div>
+    </header>
+
+    <div class="container">
+      <div class="row mt-4 mb-2">
+  
+      <div class="col-3 no-padding logo-main web-ver-logo">  
+      <a routerLink="/"> <img src="assets/images/logo.png" width="80%" class='img-fluid' alt="image"></a>
+      </div> 
+  
+      <div class="col-3 no-padding logo-main mobile-ver-logo">  
+        <a routerLink="/"> <img src="assets/images/logo.png" width="80%" class='img-fluid' alt="image"></a>
+        </div> 
+  
+      <div class="col-6 search-bar web-ver-search"><div class="input-group mb-3">
+          <input type="text" class="form-control check-pin" placeholder="Check Availability"  >
+          <button class="btn pin-search" type="button" ><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+      </div> 
+      <div class="col-9 search-bar mobile-ver-search"><div class="input-group mb-3">
+        <input type="text" class="form-control search-holder check-pin" placeholder="Search Product"  >
+        <button class="btn pin-search" type="button" ><i class="fa fa-search" aria-hidden="true"></i></button>
+      </div>
+    </div> 
+  
+      <div class="col-3  web-ver">
+          <ul class="top-right-cart">
+              <li><button class="btn download-app" type="button" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download App</button></li>
+              <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+              <li (click)="openCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+  
+          </ul>
+  
+  
+           </div>   
+      </div> 
+      <div class="row mt-1 mb-1 pb-1 responsive-row">
+        
+          <ul class="top-right-cart mobile-ver">
+              <li><button type="button" class="btn download-app"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download App</button></li>
+              <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+              <li (click)="openCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+              
+          </ul>
+      
      
     </div>
-   </div>
-</header>
-
-  <div class="container">
-    <div class="row mt-4 mb-2">
-    <div class="col-3 no-padding">  
-    <a routerLink="/"> <img src="assets/images/logo.png" width="80%" class='img-fluid' alt="image"></a>
-    </div> 
-    <div class="col-6"><div class="input-group mb-3">
-        <input type="text" class="form-control check-pin" placeholder="Search Product"  >
-        <button class="btn pin-search" type="button" ><i class="fa fa-search" aria-hidden="true"></i></button>
-      </div></div>  
-    <div class="col-3">
-        <ul class="top-right-cart">
-            <li><button class="btn download-app" type="button" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download App</button></li>
-            <li><i class="fa fa-heart-o" aria-hidden="true" routerLink="/my_wishlist"></i></li>
-            <li (click)="openCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
-        </ul>
-
-
-    </div>   
-    </div> 
-   
   </div>
-</div>
   
   
 
@@ -40,6 +67,65 @@
  
 		
 			<app-cart class="cart"></app-cart>
+
+
+
+ <!--
+ 
+
+
+<div class="container">
+    <div class="row mt-4 mb-2">
+
+    <div class="col-3 no-padding logo-main web-ver-logo">  
+    <a routerLink="/"> <img src="assets/images/logo.png" width="80%" class='img-fluid' alt="image"></a>
+    </div> 
+
+    <div class="col-3 no-padding logo-main mobile-ver-logo">  
+      <a routerLink="/"> <img src="assets/images/logo.png" width="80%" class='img-fluid' alt="image"></a>
+      </div> 
+
+    <div class="col-6 search-bar web-ver-search"><div class="input-group mb-3">
+        <input type="text" class="form-control check-pin" placeholder="Check Availability"  >
+        <button class="btn pin-search" type="button" ><i class="fa fa-search" aria-hidden="true"></i></button>
+      </div>
+    </div> 
+    <div class="col-9 search-bar mobile-ver-search"><div class="input-group mb-3">
+      <input type="text" class="form-control search-holder check-pin" placeholder="Search Product"  >
+      <button class="btn pin-search" type="button" ><i class="fa fa-search" aria-hidden="true"></i></button>
+    </div>
+  </div> 
+
+    <div class="col-3  web-ver">
+        <ul class="top-right-cart">
+            <li><button class="btn download-app" type="button" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download App</button></li>
+            <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+            <li (click)="openCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+
+        </ul>
+
+
+         </div>   
+    </div> 
+    <div class="row mt-1 mb-1 pb-1 responsive-row">
+      
+        <ul class="top-right-cart mobile-ver">
+            <li><button type="button" class="btn download-app"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download App</button></li>
+            <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+            <li (click)="openCart()"><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+            
+        </ul>
+    
+   
+  </div>
+</div>
+  
+  
+
+
+
+
+ -->     
 		
 	
 

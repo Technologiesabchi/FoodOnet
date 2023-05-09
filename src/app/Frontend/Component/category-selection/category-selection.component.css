@@ -81,3 +81,32 @@
     line-height: 27px;
 }
 .cart{display: none;}
+
+
+@media screen and (min-width:350px) and (max-width:600px) {
+    .non-responsive {
+        display:none;
+    }
+
+    .selection-buttons {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: rgba(0, 179, 160, 0.9);
+        --bs-btn-border-color: rgba(0, 179, 160, 0.9);
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg:  #ed7e20;
+        --bs-btn-hover-border-color:  #ed7e20;
+        --bs-btn-focus-shadow-rgb: 49,132,253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #ed7e20;
+        --bs-btn-active-border-color:  #ed7e20;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        border-radius: 0px;
+        width: 45vw;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .responsive-part{
+        display:none;
+    }
+}

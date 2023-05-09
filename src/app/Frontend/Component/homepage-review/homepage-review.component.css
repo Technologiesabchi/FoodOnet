@@ -86,3 +86,39 @@
           .fa-star{color:#dd4a58;font-size: 24px;
             padding: 0px 5px;}
             .author_rating{margin-bottom: 20px;}
+
+
+
+            @media screen and (min-width:350px) and (max-width:600px)  {
+                .carousel-inner{
+                    margin-top: 100px;
+                }
+            
+                .fa-star{
+                    padding: 0 3px;
+                }
+            
+                .review_container{
+                    width: 82%;
+                }
+            
+                .footer_title{
+                    color: #fff;
+                    font-size: 19px;
+                    margin-bottom: 7px;
+                    font-family: Tahoma, "Trebuchet MS", sans-serif;
+                    font-weight: normal;
+                    background: #00b3a1;
+                    padding: 5px 9px;
+                    border-radius: 5px;
+                }
+            
+                .arrow_box {
+                    position: relative;
+                    background: transparent;
+                    border-bottom: 1px solid #e7b142;
+                    width: -moz-fit-content;
+                    width: fit-content;
+                    margin: 25px auto 29px auto;
+                }
+            }
