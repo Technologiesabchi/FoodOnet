@@ -88,7 +88,7 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
 }
 
 
-@media screen and (min-width:350px) and (max-width:600px) {
+    @media screen and (min-width:350px) and (max-width:600px) {
     .fa-shopping-cart {
         margin-left: 2px;
     }
@@ -165,11 +165,11 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
     
 
 
-    @media screen and (min-width: 601px) {
-        .download-icon-res{display:none; }
-        .responsive-row{display:none;}
-        .mobile-ver-logo{display:none;}
-        .mobile-ver-search{display:none;}
-        .mobile-ver{display:none;}
-        .login-responsive-version{display:none;}
+@media screen and (min-width: 601px) {
+        .download-icon-res{ display:none; }
+        .responsive-row{ display:none;}
+        .mobile-ver-logo{ display:none;}
+        .mobile-ver-search{ display:none;}
+        .mobile-ver{ display:none;}
+        .login-responsive-version{ display:none;}
     }
