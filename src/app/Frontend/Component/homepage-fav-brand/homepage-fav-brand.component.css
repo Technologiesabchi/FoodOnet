@@ -167,9 +167,9 @@ box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.24);
  
  
  
- @media screen and (min-width: 601px)  {
+ @media screen and (min-width: 602px)  {
      .responsive {
-         display:none;
+         display: none;
      }
  }
  
