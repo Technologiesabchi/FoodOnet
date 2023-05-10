@@ -139,6 +139,6 @@
 
     @media screen and (min-width:350px) and (max-width:600px) {
       .cart_wrapper{
-        width: 100%;
+        width:100%;
       }
     }
