@@ -1,8 +1,8 @@
 <div class="overlay"><div class="spinner"></div></div>
 <div class="header_shadow">
-<header class="navbar navbar-expand-lg bg-header">
+<header class="navbar navbar-expand-lg bg-header ">
   <div class="container login-section ">
-    <div class="top-left no-padding customer-care-text">Customer Care: 1234567890 is available from 10am to 8pm for any queries, feedback or issues</div>
+    <div class="top-left no-padding customer-care-text ">Customer Care: 1234567890 is available from 10am to 8pm for any queries, feedback or issues</div>
     <div class="top-right login-web-version" id="login_fnc" >
       <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;<a *ngIf="!this.authService.isLoggedIn" routerLink="/user_login">User Login / Sign Up</a>&nbsp;<a (click)="logout()" *ngIf="this.authService.isLoggedIn" >Logout</a> |&nbsp;
       <i class="fa fa-user-secret" aria-hidden="true"></i>&nbsp;<a routerLink="/admin">Admin Login</a>
@@ -15,10 +15,10 @@
     </div>
     </header>
 
-    <div class="container">
+    <div class="container ">
       <div class="row mt-4 mb-2">
   
-      <div class="col-3 no-padding logo-main web-ver-logo">  
+      <div class="col-xs no-padding logo-main web-ver-logo">  
       <a routerLink="/"> <img src="assets/images/logo.png" width="80%" class='img-fluid' alt="image"></a>
       </div> 
   
@@ -31,13 +31,13 @@
           <button class="btn pin-search" type="button" ><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
       </div> 
-      <div class="col-9 search-bar mobile-ver-search"><div class="input-group mb-3">
+      <div class="col-8 search-bar mobile-ver-search"><div class="input-group mb-3">
         <input type="text" class="form-control search-holder check-pin" placeholder="Search Product"  >
         <button class="btn pin-search" type="button" ><i class="fa fa-search" aria-hidden="true"></i></button>
       </div>
     </div> 
   
-      <div class="col-3  web-ver ">
+      <div class="col-3 web-ver ">
           <ul class="top-right-cart">
               <li><button class="btn download-app" type="button" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp;Download App</button></li>
               <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>

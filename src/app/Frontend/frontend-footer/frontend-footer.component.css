@@ -22,12 +22,12 @@ footer{color:#fff; padding: 20px 0px; background: #000;}
 
 @media screen and (min-width: 601px) {
     footer.mobile-version{
-        display: none;
+        display:none;
     }
     
 }
 
-    @media screen and (min-width:300px) and (max-width:600px) {
+@media screen and (min-width:300px) and (max-width:600px) {
     footer.web-version {
         display:none;
     }
@@ -37,10 +37,10 @@ footer{color:#fff; padding: 20px 0px; background: #000;}
     }
 
     .footer_title{
-        font-size:19px;
+        font-size: 19px;
     }
     .footer_menu_list{
-        font-size: 14px;
+        font-size:14px;
     }
 
     .cards-accepted {
@@ -48,8 +48,8 @@ footer{color:#fff; padding: 20px 0px; background: #000;}
     }
 
     .customer-care-footer-text{
-        font-size:13px;
-        height:17vh;
+        font-size: 13px;
+        height: 17vh;
         margin-top: 5px;
         text-align: center;
     

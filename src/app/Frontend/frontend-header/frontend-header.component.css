@@ -88,9 +88,9 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
 }
 
 
-    @media screen and (min-width:350px) and (max-width:600px) {
+@media screen and (min-width:350px) and (max-width:600px) {
     .fa-shopping-cart {
-        margin-left: 2px;
+        margin-left:2px;
     }
 
    
@@ -101,8 +101,8 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
 
     
     .row-part-2{
-        display: flex;
-        flex-direction: row;
+        display:flex;
+        flex-direction:row;
         justify-content: center;
      }
 
@@ -116,8 +116,9 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.13);
      }
 
     .mobile-ver-logo{
-        width: 20%;
-        margin-left: 4vw;
+       
+        margin-left: 5vw;
+        padding-top: 10px;
     }
 
     .web-ver-search{
